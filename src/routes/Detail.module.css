@@ -1,0 +1,162 @@
+.loader {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
+  align-items: center;
+}
+.loader_wheel {
+  border-color: #bbbbbb;
+}
+.loader_text {
+  color: #333;
+}
+
+.movie_detail {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+  width: min(1200px, 90%);
+  background-color: white;
+  border-radius: 0.8em;
+  box-shadow: rgba(0, 0, 0, 0.5) 0 5px 30px;
+}
+.movie_inner {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 500px;
+}
+.movie_inner > .links {
+  position: absolute;
+  top: 2vh;
+  right: 4vw;
+  width: 30px;
+  height: 30px;
+  z-index: 1;
+}
+.movie_inner > .links:after,
+.movie_inner > .links:before {
+  position: absolute;
+  content: "";
+  top: 50%;
+  left: 50%;
+  background: #333;
+  border-radius: 1rem;
+}
+.movie_inner > .links:after {
+  width: 2px;
+  height: 30px;
+  transform: translate(-50%, -50%) rotate(132deg);
+}
+.movie_inner > .links:before {
+  width: 30px;
+  height: 2px;
+  transform: translate(-50%, -50%) rotate(-48deg);
+}
+.links > span {
+  position: relative;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: polygon(0 0, 0 0, 0 0);
+}
+.movie_poster {
+  position: relative;
+  display: flex;
+  width: 100%;
+}
+.movie_poster > .movie_pos_fill {
+  margin: 0;
+}
+.movie_pos_fill {
+  position: absolute;
+  overflow: hidden;
+  top: -80%;
+  bottom: -20%;
+  left: -28%;
+  width: 150%;
+  height: 150%;
+  transform: rotate(8deg);
+}
+.movie_pos_fill > img {
+  filter: blur(8px);
+  -o-object-fit: cover;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  opacity: 0.9;
+}
+.movie_pos_fill + p {
+  position: relative;
+  align-self: center;
+  overflow: hidden;
+  margin-top: 84px;
+  margin-left: 28px;
+  width: auto;
+  background-color: gainsboro;
+  border-radius: 2px;
+  box-shadow: rgba(0, 0, 0, 0.6) 0 6px 12px -6px;
+  z-index: 1;
+}
+.movie_pos_fill + p > img {
+  width: 180px;
+  vertical-align: middle;
+}
+.movie_info {
+  flex: 1;
+  padding: 24px;
+}
+.movie_info > ul {
+  padding: 0;
+  margin: 0;
+}
+.movie_sub_info > li {
+  list-style: none;
+  display: inline-block;
+  margin-right: 20px;
+  color: #a9a9a9;
+  font-size: 1.215rem;
+}
+.sub_text,
+.genres {
+  font-weight: 700;
+}
+.sub_text > span,
+.genres > span {
+  font-weight: 400;
+}
+.sub_text > span:first-child,
+.genres > span:first-child {
+  padding: 0 16px 0 10px;
+}
+.genres > span:first-child:after {
+  content: ",";
+}
+@media (min-width: 600px) {
+  .movie_inner > .links {
+    right: 1.5vw;
+  }
+  .movie_inner {
+    flex-direction: row;
+  }
+  .movie_poster {
+    margin-right: 12px;
+    width: 20vw;
+  }
+  .movie_pos_fill {
+    top: -20%;
+    width: 100%;
+  }
+  .movie_pos_fill + p {
+    margin: auto;
+    left: 56px;
+  }
+  .movie_info {
+    padding: 72px;
+  }
+}

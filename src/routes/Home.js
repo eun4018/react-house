@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import styles from "./Home.module.css";
 import Movie from "../components/Movie";
 
 function Home() {
@@ -8,7 +9,7 @@ function Home() {
   const getMovies = async () => {
     const json = await (
       await fetch(
-        `https://yts.mx/api/v2/list_movies.json?minimum_rating=8.5&sort_by=year`
+        `https://yts.mx/api/v2/list_movies.json?maxmum_rating=7.5&sort_by=year`
       )
     ).json();
     // const response = await fetch(
@@ -26,17 +27,20 @@ function Home() {
   return (
     <div>
       {loading ? (
-        <h1>Loading...</h1>
+        <div className={styles.loader}>
+          <div className={styles.loader_wheel}></div>
+          <div className={styles.loader_text}>Loading...</div>
+        </div>
       ) : (
-        <div>
+        <div className={styles.movie_container}>
           {movies.map((movie) => (
             <Movie
               key={movie.id}
               id={movie.id}
               coverImg={movie.medium_cover_image}
               title={movie.title}
-              summary={movie.summary}
               genres={movie.genres}
+              runtime={movie.runtime}
             />
             //key를 꼭 넣어줘야 한다.
             //일반적인 javascript가 아니라 component 이므로 부르고 싶은대로 하면됨 {이부분은 api와 같아야 함}
