@@ -148,8 +148,13 @@
   content: "";
 }
 @media (min-width: 600px) {
+  .loader {
+    min-height: 500px;
+  }
   .movie_detail {
     overflow-y: hidden;
+    height: auto;
+    min-height: 500px;
   }
   .movie_inner > .links {
     right: 1.5vw;
@@ -170,6 +175,6 @@
     left: 56px;
   }
   .movie_info {
-    padding: 72px;
+    padding: 60px;
   }
 }
