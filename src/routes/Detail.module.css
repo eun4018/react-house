@@ -132,10 +132,13 @@
 }
 .sub_text > span:first-child,
 .genres > span:first-child {
-  padding: 0 16px 0 10px;
+  padding-left: 10px;
 }
-.genres > span:first-child:after {
+.genres > span:after {
   content: ",";
+}
+.genres > span:last-child:after {
+  content: "";
 }
 @media (min-width: 600px) {
   .movie_inner > .links {

@@ -19,6 +19,7 @@ a {
   height: 400px;
   width: 100%;
   display: block;
+  position: relative;
 }
 
 .movie_img > img {
@@ -42,21 +43,45 @@ a {
   font-size: 0.9rem;
   justify-content: space-between;
 }
-.movie_genre > label {
-  display: block;
-  color: #a9a9a9;
-  margin-bottom: 5px;
-}
-.movie_genre > span + span {
-  margin: 0 5px;
-}
-.movie_runtime {
+.movie_genre {
+  /* display: block; */
+  color: #757575;
   margin: 0;
-  text-align: center;
+  padding: 0;
+  position: absolute;
+  bottom: 20px;
+  left: 10px;
+  /* margin-bottom: 5px; */
+}
+.movie_genre > li {
+  list-style: none;
+  display: inline-block;
+  font-size: 0.8rem;
+  padding: 0 0.2rem;
+  background: #a9a9a9;
+  color: #333;
+  font-weight: bold;
+  border-radius: 5px;
+}
+.movie_genre > li + li {
+  margin-left: 5px;
+}
+.movie_info_tit {
+  margin: 0;
+  text-align: left;
   color: #a9a9a9;
 }
-.movie_runtime > span {
+.movie_info_tit:nth-child(2) {
+  margin: 0 8px;
+}
+.movie_info_tit > span {
   display: block;
   margin-top: 5px;
   color: #000;
+}
+.movie_info {
+  display: flex;
+}
+.movie_info > .movie_info_tit {
+  text-align: center;
 }

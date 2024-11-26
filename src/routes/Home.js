@@ -19,6 +19,7 @@ function Home() {
     //긴버전
     setMovies(json.data.movies);
     setLoading(false);
+    console.log(json.data.movies);
   };
   useEffect(() => {
     getMovies();
@@ -41,6 +42,9 @@ function Home() {
               title={movie.title}
               genres={movie.genres}
               runtime={movie.runtime}
+              year={movie.year}
+              rating={movie.rating}
+              language={movie.language}
             />
             //key를 꼭 넣어줘야 한다.
             //일반적인 javascript가 아니라 component 이므로 부르고 싶은대로 하면됨 {이부분은 api와 같아야 함}
