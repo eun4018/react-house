@@ -54,8 +54,8 @@ function Detail() {
                 <li>{movie.language}</li>
               </ul>
               <p>
-                {movie.description_intro
-                  ? `${movie.description_intro}`
+                {movie.description_intro.length > 132
+                  ? `${movie.description_intro.slice(0, 235)}...`
                   : `There is no description of the movie.`}
               </p>
               <p className={(styles.sub_text, styles.genres)}>

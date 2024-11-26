@@ -19,6 +19,7 @@
   transform: translate(-50%, -50%);
   overflow: hidden;
   width: min(1200px, 90%);
+  height: calc(100% - 100px);
   background-color: white;
   border-radius: 0.8em;
   box-shadow: rgba(0, 0, 0, 0.5) 0 5px 30px;
@@ -122,6 +123,7 @@
   color: #a9a9a9;
   font-size: 1.215rem;
 }
+
 .sub_text,
 .genres {
   font-weight: 700;
@@ -146,6 +148,9 @@
   }
   .movie_inner {
     flex-direction: row;
+  }
+  .movie_detail {
+    height: auto;
   }
   .movie_poster {
     margin-right: 12px;

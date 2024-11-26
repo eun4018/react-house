@@ -38,7 +38,7 @@ function Home() {
             <Movie
               key={movie.id}
               id={movie.id}
-              coverImg={movie.medium_cover_image}
+              coverImg={movie.large_cover_image}
               title={movie.title}
               genres={movie.genres}
               runtime={movie.runtime}
