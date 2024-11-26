@@ -23,7 +23,9 @@ function Movie({
           </ul>
         </div>
         <div className={styles.movie_content}>
-          <h3 className={styles.title}>{title}</h3>
+          <h3 className={styles.title}>
+            {title.length > 24 ? `${title.slice(0, 24)}...` : title}
+          </h3>
           <div className={styles.movie_info_inner}>
             <p className={styles.movie_info_tit}>
               year<span>{year}</span>

@@ -4,6 +4,7 @@
   justify-content: center;
   margin: 0 auto;
   align-items: center;
+  flex: 1;
 }
 .loader_wheel {
   border-color: #bbbbbb;
@@ -17,8 +18,7 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  overflow-x: hidden;
-  overflow-y: scroll;
+  overflow: hidden;
   width: min(1200px, 90%);
   height: calc(100% - 40px);
   background-color: white;
@@ -30,7 +30,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  min-height: 500px;
+  min-height: 100%;
 }
 .movie_inner > .links {
   position: absolute;
@@ -39,6 +39,9 @@
   width: 30px;
   height: 30px;
   z-index: 1;
+  background: #f7f7f7;
+  border-radius: 50%;
+  box-shadow: 0 -1px 1px 0 rgba(0, 0, 0, 0.05), 0 1px 2px 0 rgba(0, 0, 0, 0.2);
 }
 .movie_inner > .links:after,
 .movie_inner > .links:before {
@@ -51,11 +54,11 @@
 }
 .movie_inner > .links:after {
   width: 2px;
-  height: 30px;
+  height: 20px;
   transform: translate(-50%, -50%) rotate(132deg);
 }
 .movie_inner > .links:before {
-  width: 30px;
+  width: 20px;
   height: 2px;
   transform: translate(-50%, -50%) rotate(-48deg);
 }
@@ -110,8 +113,10 @@
   vertical-align: middle;
 }
 .movie_info {
-  flex: 1;
+  flex: initial;
   padding: 24px;
+  height: 100vw;
+  overflow-y: scroll;
 }
 .movie_info > ul {
   padding: 0;
@@ -149,10 +154,10 @@
   }
   .movie_inner {
     flex-direction: row;
+    min-height: 500px;
   }
   .movie_detail {
     height: auto;
-    overflow-y: hidden;
   }
   .movie_poster {
     margin-right: 12px;
@@ -168,5 +173,8 @@
   }
   .movie_info {
     padding: 72px;
+    flex: 1;
+    height: auto;
+    overflow-y: auto;
   }
 }
