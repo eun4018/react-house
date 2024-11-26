@@ -17,9 +17,10 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: scroll;
   width: min(1200px, 90%);
-  height: calc(100% - 100px);
+  height: calc(100% - 40px);
   background-color: white;
   border-radius: 0.8em;
   box-shadow: rgba(0, 0, 0, 0.5) 0 5px 30px;
@@ -151,6 +152,7 @@
   }
   .movie_detail {
     height: auto;
+    overflow-y: hidden;
   }
   .movie_poster {
     margin-right: 12px;
