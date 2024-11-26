@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/react-house/static/css/main.ac4d6f64.css",
-    "main.js": "/react-house/static/js/main.25f04bc2.js",
+    "main.css": "/react-house/static/css/main.55e2ee81.css",
+    "main.js": "/react-house/static/js/main.a2b35b1b.js",
     "index.html": "/react-house/index.html",
-    "main.ac4d6f64.css.map": "/react-house/static/css/main.ac4d6f64.css.map",
-    "main.25f04bc2.js.map": "/react-house/static/js/main.25f04bc2.js.map"
+    "main.55e2ee81.css.map": "/react-house/static/css/main.55e2ee81.css.map",
+    "main.a2b35b1b.js.map": "/react-house/static/js/main.a2b35b1b.js.map"
   },
   "entrypoints": [
-    "static/css/main.ac4d6f64.css",
-    "static/js/main.25f04bc2.js"
+    "static/css/main.55e2ee81.css",
+    "static/js/main.a2b35b1b.js"
   ]
 }

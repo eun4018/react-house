@@ -19,7 +19,6 @@ function Home() {
     //긴버전
     setMovies(json.data.movies);
     setLoading(false);
-    console.log(json.data.movies);
   };
   useEffect(() => {
     getMovies();
