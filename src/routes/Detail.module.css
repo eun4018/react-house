@@ -154,7 +154,7 @@
   .movie_detail {
     overflow-y: hidden;
     height: auto;
-    min-height: 500px;
+    /* min-height: 500px; */
   }
   .movie_inner > .links {
     right: 1.5vw;
